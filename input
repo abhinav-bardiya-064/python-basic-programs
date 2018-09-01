@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug 10 10:50:54 2018
+
+@author: apb
+"""
+try:
+    my_no=input('hi input your number ')
+    print(my_no)
+    cool=int(my_no)
+except ValueError:
+    print('gadbad hai')
+else:
+    print('everything is fine')
+
+ram=int(my_no)

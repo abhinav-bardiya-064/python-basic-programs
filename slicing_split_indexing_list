@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""AZ-90-
+Created on Sun Aug 12 20:55:22 2018
+
+@author: apb
+"""
+import numpy as np
+a=[1.3,2.3,4.5]
+print(a)
+
+b=np.array([1.3,2.3,4.5])
+print(b)
+
+c=np.array([[1,2,3],[4,5,2],[6,8,3]],dtype=np.int16)
+print(c)
+"""
+lets learn differnet slicing and spliting
+"""
+print(c[1:2,:])
+print(c[2,1])
+print('amaging')
+print(c[:,1:])
+print('note the varaition')
+print(c[:,1])
+
+"""note c[:,1] then c[:,1:2] has different meaning """
+
+print(c)
+print(c[1:,1:])
+
+"""try boolean indexing"""
+print('boolean indexing')
+print(c)
+print(c[c<5])
+
+""" fancy indexing"""
+print('fancy indexing')
+print(c[[0,1,2,2],[1,0,1,0]])
+
+"""transposing array & changing shape"""
+print('transposing array & changing shape')
+
+print(c);
+print(c.transpose())
+d=np.transpose(c)
+print(d)
+
+e=c.ravel();
+print(e)
+f=e.reshape(3,3)
+print(f)
+""" note the below statement produces error
+f=e.reshape(3,2)
+print(f)
+"""
+print('lets see how resize works')
+g=np.append(e,[2,3,4])
+print(g)
+h=g.reshape(2,6)
+print(h)
+print('next is insert')
+i=np.insert(h,1,[2,3,4,5,2,6])
+print(i)
+print(h)
+
+print('concate two arrays')
+a=np.array([[1,2,3],[2,5,4]],dtype=np.int16)
+b=np.array([[3,1,2],[2,3,3],[2,3,1]],dtype=np.int16)
+c=np.array([[3,1,2],[2,3,3]],dtype=np.int16)
+print(a)
+print(b)
+com=np.concatenate((a,b))
+com2=np.concatenate((a,c),axis=1) # note axis=0 then column wise/ axis=1 row wise
+print(com)
+print(com2)
+
+print('lets learn stacking')
+print(a)
+print(b)
+stack_1=np.vstack(a) #could not understand what it does
+print(stack_1)
+stack_2=np.hstack(a)
+print(stack_2)
+"""
+split the array in equl halfs
+"""
+print('lets learn spliting')
+split1=np.split(a,3,axis=1)
+print(split1)
+
+
+
+

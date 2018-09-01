@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug 12 09:08:24 2018
+
+@author: apb
+"""
+
+"""
+print all the operations were performed element wise.
+"""
+import numpy as np
+a=np.array([[2,4,6],[4,3,7]],dtype=np.float)
+b=np.array([[5,4,2],[3,5,9]],dtype=np.float)
+print(a)
+print(b)
+
+print('\nHere goes a-b')
+print(a-b)
+print(np.subtract(a,b))
+"""
+its worth noting that the multiplication is not matrix one
+"""
+print('\nHere goes a*b')
+print(a)
+print(b)
+print(a*b)
+print(np.multiply(a,b))
+"""
+print('matrices multiplication')
+b=b.transpose()
+print(a.dot(b))
+"""
+print('\nHere goes a/b')
+print(a)
+print(b)
+print(a/b)
+print('\nHere goes a+b')
+print(a)
+print(b)
+print(a+b)
+print('\nlet see what it does')
+print(b)
+print(1+b)
+print('\n to see if multi also done element wise')
+print(b)
+print(b*.5)
+print(np.exp(b))
+print(np.log(b))
+print(np.sqrt(b))
+"""
+element wise comparision
+"""
+print('-------------------element wise comparision------------------')
+c=np.array([[2,4,6],[4,3,7]],dtype=np.float)
+print(a)
+print(b)
+print(c)
+z=(a.any()==b.any());
+print(z)
+z=(a.all()==b.all());
+print(z)
+""" note any is function () else would retur wrong results"""
+if a.all==b.all:  
+    print('all equal')
+    
+z=(a.any()==c.any());
+print(z)
+z=(a.all()==c.all());
+print(z)
+
+if a.all()==c.all():
+    print('all equal')
+
+print(a==b)
+print(a==c)
+
+""" array wise equality"""
+print(np.array_equal(a,b))
+
+print(a)
+print('sum(a)')
+print(sum(a))
+print('a.sum()')
+print(a.sum())
+print('a.min()')
+print(a.min())
+print('a.max()')
+print(a.max())
+print(a.mean())
+
+""" playing with array copy stuff"""
+h=a.view()
+print(h)
+print(h[0][1])
+print(h[0,1])
+print('np.copy(a)')
+i=np.copy(a)
+print(i)
+print('a.copy()')
+j=a.copy();
+print(j)
+print('lets see some sorting stuff')
+j=a
+print(a)
+a.sort(axis=0)
+print('a.sort(axis=1)')
+print(a)
+a=j
+a.sort(axis=-1)
+print('a.sort(axis=0)')
+print(a)
+print('a.sort()')
+a=j
+a.sort()
+print(a)
+
+print(a)

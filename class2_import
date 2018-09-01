@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 25 19:21:01 2018
+
+@author: apb
+"""
+
+from class_main import pug
+#import class_main pug as ab
+
+print('----from new class importing module------')
+mypug=pug('chita')
+#mypug=ab.pug('chita')
+print(mypug.height)
+print('lets overwrite')
+mypug.myspec()
+print(mypug.height)
+
+mypug.bark()
+
+"""
+note : when only pug class imported its super class can also be accessed
+"""

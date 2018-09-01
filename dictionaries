@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug 10 12:47:31 2018
+
+@author: apb
+"""
+stats={'game':'age of empire','stage':'Medival','won':'3','lose':'0'}
+
+print(stats)
+print(stats['game'])
+print(stats['stage'])
+print(stats['won'])
+print(stats['lose'])
+
+# print(stats['2']) - note this does not works
+# print(stats[-1]) - note ths also does not works
+
+print(stats.get('won'))
+
+# adding new key-value pairs
+
+stats['ships']=99
+stats['soldiers']=150
+print(stats)
+
+# modifying exisiting ones
+
+stats['ships']=20
+stats['stage']='Advanced'
+print(stats)
+
+# looping/traversing through dictionary
+
+for key,value in stats.items():
+    print('key is: '+key+' value is: '+str(value))
+
+# only keys
+
+for first in stats.keys():
+    print(first)
+
+# only values
+
+for sec in stats.values():
+    print(sec)
+    
+
+    
+    
+    
+    
+    
+    
+    

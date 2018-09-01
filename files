@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Aug  9 10:01:32 2018
+
+@author: apb
+"""
+
+filename='try.txt'
+with open(filename) as fileobj:
+    lines=fileobj.readlines()
+    
+for eachl in lines:
+    print(eachl)
+    
+print(fileobj._CHUNK_SIZE)
+print(fileobj.name)
+
+# output file note writeline(lines) all in one line
+# then used for loop and passed one line at time
+# use '\n' for next line in textfile
+
+lines=['my first line','my second line','my third line']
+
+writefile='try.txt'
+with open(writefile,'a') as outobj:
+    for data1 in lines:
+        outobj.write('\n'+data1)
+    
